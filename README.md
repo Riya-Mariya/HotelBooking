@@ -16,7 +16,7 @@ curl --location 'http://localhost:8080/bookings' \
   "isPaid": true
 }'
 
-Sample output
+**Sample output**
 {
     "id": 1,
     "name": "Test",
@@ -44,7 +44,8 @@ curl --location --request PUT 'http://localhost:8080/bookings/1' \
   "roomType": "Standard",
   "isPaid": true
 }'
-Response
+
+**Response**
 {
     "id": 1,
     "name": "Test UpdateUser",
@@ -56,6 +57,7 @@ Response
     "roomType": "Standard",
     "isPaid": false
 }
+
 **Search with id**
 
 **Request**
@@ -71,6 +73,7 @@ curl --location --request GET 'http://localhost:8080/bookings/1' \
   "roomType": "Standard",
   "isPaid": true
 }'
+
 Response
 {
     "id": 1,
