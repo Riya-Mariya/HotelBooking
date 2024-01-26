@@ -27,7 +27,7 @@ public class BookingServiceImplTest {
     }
 
     public void setup() {
-        bookingRepository.deleteAll().block(); // Assuming deleteAll returns a Mono<Void>
+        bookingRepository.deleteAll().block(); 
     }
 
     @Test
@@ -57,7 +57,7 @@ public class BookingServiceImplTest {
 
     @Test
     public void createBookingTest() {
-        Booking bookingTestData1 = Booking.builder() // Use a unique ID for each test
+        Booking bookingTestData1 = Booking.builder()
                 .name("Juan").checkInDate(LocalDate.parse("2024-03-05")).checkOutDate(LocalDate.parse("2024-02-05"))
                 .email("jan@gmail.com").telephone("1312425").isPaid(true).numberOfGuests(2).roomType("Deluxe").build();
 
@@ -66,7 +66,6 @@ public class BookingServiceImplTest {
         StepVerifier.create(result)
                 .assertNext(booking -> {
                     assertEquals("Juan", booking.getName());
-                    // Add more assertions if needed
                 })
                 .expectComplete()
                 .verify();
@@ -86,7 +85,6 @@ public class BookingServiceImplTest {
         StepVerifier.create(result)
                 .assertNext(booking -> {
                     assertEquals("Juvaniya", booking.getName());
-                    // Add more assertions if needed
                 })
                 .expectComplete()
                 .verify();
