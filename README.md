@@ -26,7 +26,7 @@ curl --location 'http://localhost:8080/bookings' \
     "telephone": "132435346",
     "numberOfGuests": 2,
     "roomType": "Standard",
-    "paid": false
+    "isPaid": true
 }
 
 **Update Booking API**
