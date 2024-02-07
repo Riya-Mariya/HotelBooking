@@ -46,6 +46,7 @@ public class Booking {
     @NotBlank(message = "Room type cannot be blank")
     @Column("roomType")
     private String roomType;
+    @JsonProperty("isPaid")
     @Column("isPaid")
     private boolean isPaid;
 
